@@ -10,6 +10,7 @@ class Image{
     public:
         Image();
         Image(string fileName);
+        void saveImage(string fileName);
     private:
         std::vector<unsigned char> image;
         int width, height;
