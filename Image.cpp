@@ -21,7 +21,7 @@ class Image{
                 }
             }
         }
-        
+
         Image(string fileName){
             //decode
             unsigned error = lodepng::decode(image, width, height, fileName.c_str());
@@ -38,6 +38,7 @@ class Image{
             if(error) std::cout << "encoder error " << error << ": "<< lodepng_error_text(error) << std::endl;
         }
 
+        
 
     private:
         std::vector<unsigned char> image;
