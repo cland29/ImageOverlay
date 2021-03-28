@@ -44,6 +44,19 @@ class Image{
             if(error) std::cout << "encoder error " << error << ": "<< lodepng_error_text(error) << std::endl;
         }
 
+        void setRGBPixel(unsigned x, unsigned y, glm::vec3 pixel){
+            image[4 * width * y + 4 * x + 0] = pixel[0];
+            image[4 * width * y + 4 * x + 1] = pixel[1];
+            image[4 * width * y + 4 * x + 2] = pixel[2];
+            image[4 * width * y + 4 * x + 3] = 255;
+        }
+
+        void setRGBPixel(unsigned x, unsigned y, glm::vec4 pixel){
+            image[4 * width * y + 4 * x + 0] = pixel[0];
+            image[4 * width * y + 4 * x + 1] = pixel[1];
+            image[4 * width * y + 4 * x + 2] = pixel[2];
+            image[4 * width * y + 4 * x + 3] = pixel[3];
+        }
         
 
     private:

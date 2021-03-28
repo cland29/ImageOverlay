@@ -17,6 +17,8 @@ class Image{
         Image();
         Image(string fileName);
         void saveImage(string fileName);
+        void setRGBPixel(unsigned x, unsigned y, glm::vec3 pixel);
+        void setRGBPixel(unsigned x, unsigned y, glm::vec4 pixel);
     private:
         std::vector<unsigned char> image;
         int width, height;
