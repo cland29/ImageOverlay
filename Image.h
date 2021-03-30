@@ -4,10 +4,10 @@
 #include <iostream>
 
 //glm
-#include <glm/glm.hpp>
-#include <glm/gtc/type_ptr.hpp>
-#include <glm/gtc/matrix_transform.hpp>
-#include <glm/gtc/half_float.hpp>
+#include "glm/glm.hpp"
+#include "glm/gtc/type_ptr.hpp"
+#include "glm/gtc/matrix_transform.hpp"
+#include "glm/gtc/half_float.hpp"
 
 using namespace std;
 
@@ -21,5 +21,5 @@ class Image{
         void setRGBPixel(unsigned x, unsigned y, glm::vec4 pixel);
     private:
         std::vector<unsigned char> image;
-        int width, height;
+        unsigned width, height;
 };
