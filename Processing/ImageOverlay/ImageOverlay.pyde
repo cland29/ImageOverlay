@@ -8,11 +8,11 @@ import Overlay
 def setup():
     
     size(480, 120)
-    test = Image.myImage("test.PNG")
+    
+    
     bgTest = Image.myImage("bgTest.PNG")
     utilitiesObj = Overlay.utility()
-    testOut = utilitiesObj.overlay([test], bgTest)
-    testOut.saveImg("test1.PNG")
+    utilitiesObj.mult_overlay(["test"], ".PNG", bgTest, 4, "test/testOut")
     
     print("done")
 

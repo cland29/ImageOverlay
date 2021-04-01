@@ -36,5 +36,18 @@ class utility(object):
         return overlay_img
                     
         
+    def mult_overlay(self, filenames, ext, bg_img, img_count, save_name):
+        #Needs to be filenames without the extention
+        img_list = []
+        for i in range(1, img_count + 1):
+            print("Processing image " + str(i) + " of " + str(img_count))
+            for name in filenames:
+                img_list.append(Image.myImage(name + "{:04d}".format(i) + ext))
+            overlay_img = self.overlay(img_list, bg_img)
+            overlay_img.saveImg(save_name + "{:04d}".format(i) + ext)
+            img_list = []
+                
+            
+        
 
         
