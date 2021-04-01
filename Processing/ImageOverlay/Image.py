@@ -16,5 +16,6 @@ class myImage(object):
     def setPixel(self, x, y, col):
         self.img.pixels[y * self.width + x] = col
     
+    
     def saveImg(self, filename):
         self.img.save(filename)
