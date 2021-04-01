@@ -9,10 +9,10 @@ class myImage(object):
         return self.img.pixels[y * self.width + x]
     
     def getPixelCol(self, x, y):
-        red = red(self.img.pixels[y * self.width + x])
-        green = green(self.img.pixels[y * self.width + x])
-        blue = blue(self.img.pixels[y * self.width + x])
-        return (red, green, blue)
+        redP = red(self.img.pixels[y * self.width + x])
+        greenP = green(self.img.pixels[y * self.width + x])
+        blueP = blue(self.img.pixels[y * self.width + x])
+        return (redP, greenP, blueP)
     
     def setPixel(self, x, y, col):
         self.img.pixels[y * self.width + x] = col
