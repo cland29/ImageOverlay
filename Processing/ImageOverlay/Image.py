@@ -3,6 +3,7 @@ class myImage(object):
         self.img = loadImage(filename)
         self.width = self.img.width
         self.height = self.img.height
+        self.filename = filename
     
     def getPixel(self, x, y):
         return self.img.pixels[y * self.width + x]
@@ -15,6 +16,8 @@ class myImage(object):
     
     def setPixel(self, x, y, col):
         self.img.pixels[y * self.width + x] = col
+        
+    
     
     
     def saveImg(self, filename):
